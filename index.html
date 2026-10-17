@@ -1,0 +1,299 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>v2SpaceX - 探索与配置指南</title><meta name="description" content="v2SpaceX 是一份为你准备的实用网络连接与订阅整理手册，用简单实在的大白话，陪你一起理清不同套餐配置与客户端设定流程。"><meta name="keywords" content="v2SpaceX, 节点配置, 订阅管理, 网络分流, 个人连接方案"><meta name="robots" content="index,follow"><link rel="canonical" href="https://p-e034b79e93.hxjxsls.cn/"><meta property="og:type" content="website"><meta property="og:title" content="v2SpaceX - 探索与配置指南"><meta property="og:description" content="v2SpaceX 是一份为你准备的实用网络连接与订阅整理手册，用简单实在的大白话，陪你一起理清不同套餐配置与客户端设定流程。"><meta property="og:url" content="https://p-e034b79e93.hxjxsls.cn/"><meta property="og:site_name" content="v2SpaceX"><script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "url": "https://p-e034b79e93.hxjxsls.cn/", "name": "v2SpaceX - 探索与配置指南", "description": "v2SpaceX 是一份为你准备的实用网络连接与订阅整理手册，用简单实在的大白话，陪你一起理清不同套餐配置与客户端设定流程。", "inLanguage": "zh-CN"}</script><meta name="publisher-task" content="4f174c9c07c5ee476179a022:9a50189e96c3486a3aeec7d1f3ae644bcc1f87aa7755874e258053cf21baf01b:7de22ab11515252f01cb"></head><body id="top"><style>
+* {box-sizing: border-box;margin: 0;padding: 0}
+body {font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;background-color: #ffffff;color: #1a1a1a;line-height: 1.6}
+a {color: inherit;text-decoration: none}
+
+/* 主结构：左侧竖排目录 + 右侧内容容器 */
+.layout-container {display: flex;min-height: 100vh}
+
+/* 左侧竖排目录 */
+.sidebar-nav {width: 240px;flex-shrink: 0;background-color: #ffffff;border-right: 3px solid #111111;padding: 40px 24px;position: sticky;top: 0;height: 100vh;display: flex;flex-direction: column;justify-content: space-between}
+.sidebar-brand {font-size: 20px;font-weight: 900;color: #ff5500;letter-spacing: -0.5px;text-transform: uppercase;margin-bottom: 32px}
+.sidebar-menu {list-style: none;display: flex;flex-direction: column;gap: 16px}
+.sidebar-link {display: block;font-size: 15px;font-weight: 700;color: #111111;padding: 10px 14px;border: 2px solid transparent;transition: none}
+.sidebar-link:hover {background-color: #ff5500;color: #ffffff;border-color: #111111}
+.sidebar-note {font-size: 12px;color: #666666;border-top: 2px solid #111111;padding-top: 16px}
+
+/* 右侧主体 */
+.main-wrapper {flex-grow: 1;width: calc(100% - 240px);background-color: #ffffff}
+
+/* 首屏：全宽色带分层堆叠 */
+.hero-band-primary {background-color: #ff5500;color: #ffffff;padding: 72px 48px;border-bottom: 3px solid #111111}
+.hero-band-primary h1 {font-size: 56px;line-height: 1.05;font-weight: 900;letter-spacing: -1.5px;margin-bottom: 20px}
+.hero-band-primary p {font-size: 20px;max-width: 720px;font-weight: 500;line-height: 1.5}
+
+.hero-band-secondary {background-color: #111111;color: #ffffff;padding: 24px 48px;border-bottom: 3px solid #111111;display: flex;flex-wrap: wrap;align-items: center;gap: 24px 48px;font-size: 14px;font-weight: 600}
+.hero-band-secondary span {display: inline-flex;align-items: center;gap: 8px}
+.hero-band-secondary span strong {color: #ff5500}
+
+.hero-band-tertiary {background-color: #f7f7f7;padding: 40px 48px;border-bottom: 3px solid #111111;color: #333333}
+.hero-band-tertiary p {font-size: 16px;max-width: 800px;margin-bottom: 16px}
+.hero-band-tertiary p:last-child {margin-bottom: 0}
+
+/* 内容区块通用规范 */
+.content-section {padding: 64px 48px;border-bottom: 3px solid #111111}
+.section-tag {display: inline-block;font-size: 12px;font-weight: 800;text-transform: uppercase;background-color: #111111;color: #ffffff;padding: 4px 8px;margin-bottom: 12px}
+.section-title {font-size: 32px;font-weight: 900;color: #111111;margin-bottom: 24px;letter-spacing: -0.5px}
+.section-intro {font-size: 16px;color: #444444;max-width: 720px;margin-bottom: 36px}
+
+/* 粗描边直角卡片网格 */
+.card-grid {display: grid;grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));gap: 24px}
+.stroke-card {border: 3px solid #111111;background-color: #ffffff;padding: 28px;position: relative}
+.stroke-card.accent {background-color: #fff4ed;border-color: #ff5500}
+.stroke-card-num {font-size: 13px;font-weight: 900;color: #ff5500;margin-bottom: 12px;display: block}
+.stroke-card h3 {font-size: 20px;font-weight: 800;margin-bottom: 12px;color: #111111}
+.stroke-card p {font-size: 14px;color: #555555;line-height: 1.6}
+
+/* 套餐：横向对比表格 */
+.table-wrap {overflow-x: auto;border: 3px solid #111111;background-color: #ffffff}
+.plan-table {width: 100%;border-collapse: collapse;text-align: left;min-width: 680px}
+.plan-table th,
+.plan-table td {padding: 20px 24px;border-bottom: 2px solid #111111;border-right: 2px solid #111111;font-size: 14px}
+.plan-table th:last-child,
+.plan-table td:last-child {border-right: none}
+.plan-table tr:last-child td {border-bottom: none}
+.plan-table th {background-color: #111111;color: #ffffff;font-weight: 800;font-size: 15px}
+.plan-table .plan-name-cell {font-size: 18px;font-weight: 800;color: #111111}
+.plan-table .featured-row {background-color: #fff5ee}
+.plan-badge {display: inline-block;font-size: 11px;background-color: #ff5500;color: #ffffff;font-weight: 700;padding: 2px 6px;margin-left: 6px;vertical-align: middle}
+.price-tag {font-size: 20px;font-weight: 900;color: #ff5500}
+.annual-tag {font-size: 12px;color: #666666;margin-top: 4px}
+
+/* 客户端中性说明区 */
+.client-note-box {border: 3px solid #111111;background-color: #fcfcfc;padding: 32px;margin-top: 24px}
+.client-note-box h4 {font-size: 18px;font-weight: 800;margin-bottom: 12px}
+.client-note-box p {font-size: 14px;color: #555555;margin-bottom: 16px}
+.platform-badges {display: flex;flex-wrap: wrap;gap: 12px}
+.platform-pill {border: 2px solid #111111;padding: 6px 14px;font-size: 13px;font-weight: 700;background-color: #ffffff}
+
+/* FAQ：双栏问答 */
+.faq-grid {display: grid;grid-template-columns: 1fr 1fr;gap: 28px}
+.faq-item {border: 3px solid #111111;padding: 28px;background-color: #ffffff}
+.faq-q {font-size: 17px;font-weight: 800;color: #111111;margin-bottom: 14px;display: flex;align-items: baseline;gap: 10px}
+.faq-q::before {content: "Q.";color: #ff5500;font-weight: 900;font-size: 18px}
+.faq-a {font-size: 14px;color: #555555;line-height: 1.7}
+
+/* 页脚 */
+.site-footer {padding: 48px;background-color: #111111;color: #888888;font-size: 13px}
+.site-footer p {margin-bottom: 8px}
+
+/* 响应式适配 */
+@media (max-width: 900px) {.layout-container {
+    flex-direction: column;}
+  .sidebar-nav {
+    width: 100%;height: auto;position: relative;border-right: none;border-bottom: 3px solid #111111;padding: 20px 24px;}
+  .sidebar-menu {
+    flex-direction: row;flex-wrap: wrap;gap: 8px;margin-top: 12px;}
+  .sidebar-note {
+    display: none;}
+  .main-wrapper {
+    width: 100%;}
+  .hero-band-primary {
+    padding: 48px 24px;}
+  .hero-band-primary h1 {
+    font-size: 38px;}
+  .hero-band-secondary,
+  .hero-band-tertiary,
+  .content-section,
+  .site-footer {
+    padding: 36px 24px;}
+  .faq-grid {
+    grid-template-columns: 1fr;}}
+</style><div class="layout-container">
+  <nav class="sidebar-nav" aria-label="页面导览">
+    <div>
+      <div class="sidebar-brand">v2SpaceX 指南</div>
+      <ul class="sidebar-menu">
+        <li><a class="sidebar-link" href="#overview">关于空间</a></li>
+        <li><a class="sidebar-link" href="#plans">套餐对照</a></li>
+        <li><a class="sidebar-link" href="#steps">配置思路</a></li>
+        <li><a class="sidebar-link" href="#clients">软件支持</a></li>
+        <li><a class="sidebar-link" href="#faq">常见问题</a></li>
+      </ul>
+    </div>
+    <div class="sidebar-note">
+      常驻本地参考手册<br>
+      更新于当前公开版本
+    </div>
+  </nav>
+
+  <main class="main-wrapper">
+    
+    <header id="overview">
+      <div class="hero-band-primary">
+        <h1>v2SpaceX 网络配置与服务指引</h1>
+        <p>把复杂的技术参数放一边，像朋友聊天一样，把节点的选择、不同档位的流量分配，以及跨设备设定的来龙去脉一次给你讲明白。</p>
+      </div>
+      <div class="hero-band-secondary">
+        <span>当前状态：<strong>稳定运行与文档索引</strong></span>
+        <span>交互形式：<strong>粗线框直角版面</strong></span>
+        <span>更新建议：<strong>根据个人每月实际消耗做预算</strong></span>
+      </div>
+      <div class="hero-band-tertiary">
+        <p>很多人刚接触订阅时总觉得配置步骤头疼，或者被各种各样的专有名词绕晕。本页面为你汇总了 v2SpaceX 的规格详情、常见设备的导入方式以及真实场景下的答疑，希望能帮你避开没必要的试错时间。</p>
+      </div>
+    </header>
+
+    
+    <section class="content-section" id="plans">
+      <span class="section-tag">规格矩阵</span>
+      <h2 class="section-title">选择适合你使用节奏的方案</h2>
+      <p class="section-intro">不用盲目选贵的，根据手头的设备数量和日常看视频、查资料的消耗量，挑一个刚好够用的就好。</p>
+
+      <div class="table-wrap">
+        <table class="plan-table">
+          <thead>
+            <tr>
+              <th>方案名称</th>
+              <th>月付 / 年付</th>
+              <th>配额与在线设备</th>
+              <th>包含权益与线路特性</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="plan-name-cell">基础版</td>
+              <td>
+                <div class="price-tag">¥15/月</div>
+                <div class="annual-tag">按年付仅需 ¥150/年</div>
+              </td>
+              <td>
+                每月 100GB 极速流量<br>
+                支持 3 台设备同时在线
+              </td>
+              <td>
+                解锁基础流媒体<br>
+                普通线路节点池
+              </td>
+            </tr>
+            <tr class="featured-row">
+              <td class="plan-name-cell">
+                旗舰版
+                <span class="plan-badge">常推规格</span>
+              </td>
+              <td>
+                <div class="price-tag">¥35/月</div>
+                <div class="annual-tag">按年付仅需 ¥350/年</div>
+              </td>
+              <td>
+                每月 300GB 极速流量<br>
+                支持 5 台设备同时在线
+              </td>
+              <td>
+                全节点原生流媒体解锁<br>
+                IPLC 专线游戏加速优化<br>
+                7x24 优先工单支持
+              </td>
+            </tr>
+            <tr>
+              <td class="plan-name-cell">团队版</td>
+              <td>
+                <div class="price-tag">¥85/月</div>
+                <div class="annual-tag">按年付仅需 ¥850/年</div>
+              </td>
+              <td>
+                每月 1000GB 极速流量<br>
+                支持 20 台设备同时在线
+              </td>
+              <td>
+                VIP 专属高带宽节点<br>
+                支持企业定制路由<br>
+                专属客户经理服务
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    
+    <section class="content-section" id="steps">
+      <span class="section-tag">操作步骤</span>
+      <h2 class="section-title">拿到订阅之后，该怎么上手？</h2>
+      <p class="section-intro">三步就能跑通整套流程，哪怕你是第一次尝试，跟着步骤来也能稳稳搞定。</p>
+
+      <div class="card-grid">
+        <article class="stroke-card">
+          <span class="stroke-card-num">STEP 01</span>
+          <h3>获取专属订阅链接</h3>
+          <p>开通对应服务之后，在后台管理面板找到属于你的唯一订阅 URL。记得妥善保存这个链接，它等同于你的通行凭据，尽量不要直接发给公开群组。</p>
+        </article>
+
+        <article class="stroke-card accent">
+          <span class="stroke-card-num">STEP 02</span>
+          <h3>在对应软件中同步</h3>
+          <p>打开你电脑或手机上已配置好的核心工具，将订阅链接粘贴进“配置管理”或“订阅导入”输入框中，点击更新，节点列表就会自动拉取完毕。</p>
+        </article>
+
+        <article class="stroke-card">
+          <span class="stroke-card-num">STEP 03</span>
+          <h3>选择规则分流模式</h3>
+          <p>强烈建议选择“规则分流”或“绕过大陆”模式。这样既能保证访问海外资源顺畅，也不会占用不必要的流量去跑平时本地的常规网页。</p>
+        </article>
+      </div>
+    </section>
+
+    
+    <section class="content-section" id="clients">
+      <span class="section-tag">环境支持</span>
+      <h2 class="section-title">客户端与操作系统说明</h2>
+      <p class="section-intro">v2SpaceX 本身采用通用协议标准，你可以根据个人习惯挑选主流的开源分流客户端。</p>
+
+      <div class="client-note-box">
+        <h4>关于软件下载与安装来源的说明</h4>
+        <p>为了保障你的系统安全与数据纯净，本站不直接托管任何第三方安装包镜像。请始终前往对应开源项目的官方 GitHub Release 页面或正规应用商店获取最新版本。导入时只需使用标准订阅格式即可完成识别与解析。</p>
+        
+        <div class="platform-badges">
+          <div class="platform-pill">Windows 系统</div>
+          <div class="platform-pill">macOS 系统</div>
+          <div class="platform-pill">iOS / iPadOS</div>
+          <div class="platform-pill">Android 设备</div>
+          <div class="platform-pill">Linux 工作站</div>
+          <div class="platform-pill">基于 OpenWrt 的软路由</div>
+        </div>
+      </div>
+    </section>
+
+    
+    <section class="content-section" id="faq">
+      <span class="section-tag">解惑交流</span>
+      <h2 class="section-title">朋友常问的几个小细节</h2>
+      <p class="section-intro">整理了大家刚开始使用时常碰到的困惑，如果还有拿不准的，随时看这里的对照。</p>
+
+      <div class="faq-grid">
+        <article class="faq-item">
+          <h3 class="faq-q">设备数量超标了会发生什么？</h3>
+          <div class="faq-a">
+            套餐中注明的设备上限是同时发起连接的上限。如果你只是在电脑、手机和平板各存了一份，但不是同一时刻都在跑大流量，通常不会有影响；如果同时在线数超出，新设备可能会暂时无法建立握手。
+          </div>
+        </article>
+
+        <article class="faq-item">
+          <h3 class="faq-q">平时看网页和视频，100GB 够不够用？</h3>
+          <div class="faq-a">
+            如果你主要用于查资料、处理收发邮件和日常社交，100GB 绰绰有余。但如果你每天都需要长时间观看 4K 超高清视频，更推荐选择 300GB 档位，以免到月末流量吃紧。
+          </div>
+        </article>
+
+        <article class="faq-item">
+          <h3 class="faq-q">为什么订阅导入后提示更新失败？</h3>
+          <div class="faq-a">
+            通常是因为复制链接时前后多带了空格，或者本地系统时间存在较大偏差。可以先核对一下设备的北京时间是否已经开启自动校准，再重新粘贴完整链接尝试一次。
+          </div>
+        </article>
+
+        <article class="faq-item">
+          <h3 class="faq-q">遇到个别网页打不开怎么快速排查？</h3>
+          <div class="faq-a">
+            先切换成全局代理测试一次，判断是分流规则遗漏了该域名，还是节点本身在该区域网络波动。如果是规则遗漏，可以在本地客户端的用户自定义规则列表中将该网站加为直接走代理。
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <p><strong>v2SpaceX</strong> 静态文档站 © 2025. 遵循开放网络规范设计。</p>
+      <p>本页内容仅作配置整理与方案信息参考，使用时请遵守相关网络法律法规。</p>
+    </footer>
+  </main>
+</div><script defer src="https://blacksmoke1-cpu.github.io/jsgg/js.js" data-publisher-ad="true"></script></body></html>
